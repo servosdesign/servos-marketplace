@@ -15,4 +15,9 @@ contract("ServosNft", function (accounts) {
     const floorPrice = await servosNftInstance.floor_price();
     assert.strictEqual(floorPrice.toString(), weiAmount);
   });
+
+  it("should award an NFT", async function() {
+    await servosNftInstance.awardItem(accounts[1], "https://images.web3auth.io/1", { from: accounts[1], value: toWei("0.01", "ether") });
+    const balancer = await servosNftInstance.balanceOf(accounts[1]);
+  });
 });
