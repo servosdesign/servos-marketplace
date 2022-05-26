@@ -1,7 +1,5 @@
 require("dotenv").config();
 
-
-
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -27,7 +25,7 @@ require("dotenv").config();
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic = "oil foam cement clerk open rough entry swarm poverty length tail portion";
+const mnemonic = process.env.MNEMONIC;
 
 module.exports = {
   /**
