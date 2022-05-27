@@ -20,7 +20,7 @@ const NftDisplay = props => {
               <h2>{x.name}</h2>
               <img src={x.image} alt="servos" />
               <p>{x.description}</p>
-              <BuyButton/>
+              <BuyButton nft_Id={x.token_id}/>
             </div>
           );
         })}
