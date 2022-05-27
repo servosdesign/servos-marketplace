@@ -1,12 +1,12 @@
-import React from 'react';
 
-import NftDisplay from './components/nft-display/nft-display.component';
 
 import './App.css';
 
 function App() {
   return (
-  <NftDisplay />
+    <div className="App">
+
+    </div>
   );
 }
 

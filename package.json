@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/servosdesign/nft-marketplace/issues"
   },
-  "homepage": "https://github.com/servosdesign/nft-marketplace#readme"
+  "homepage": "https://github.com/servosdesign/nft-marketplace#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.18.3"
+  }
 }
