@@ -46,9 +46,9 @@ module.exports = {
     // options below to some value.
     //
     development: {
-     host: "localhost",
-    port: 7545,
-    network_id: "*",
+      host: "localhost",
+      port: 7545,
+      network_id: "*",
     //   provider: new HDWalletProvider({ mnemonic: { phrase: mnemonic }, url: "http://localhost:7545", numberOfAddresses: 101 }),
    },
     // Another network with more advanced options...
