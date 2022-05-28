@@ -51,7 +51,7 @@ export const StyledButton = styled.button`
 
 
   & h3 {
-    font-size: 1.0em;
+    font-size: 0.9em;
     line-height: 1.33333em;
     padding-left: 2em;
     display: block;
