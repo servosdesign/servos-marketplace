@@ -36,7 +36,7 @@ function App() {
 
   const buy = async (nft_id) => {
     console.log("buying nft", nft_id);
-    const contract = new web3.eth.Contract(ServosNft.abi, nftDetails.contractAddress);
+    const contract = new web3.eth.Contract(ServosNft.abi, nftDetails['contractAddress:']);
     const currentServos = allServos.find((servos) => servos.token_id === nft_id);
     const gasEstimate = await contract.methods
       .awardItem(account, currentServos.hosted_url)
@@ -79,7 +79,7 @@ function App() {
       account={account}
       logoutButton={logout}
       />
-      <NftDisplay buyNft={buy}/>
+      <NftDisplay isLoggedIn={provider} buyNft={buy}/>
     </div>
   );
 }

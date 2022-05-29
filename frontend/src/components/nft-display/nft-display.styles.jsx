@@ -30,4 +30,15 @@ export const StyledDisplay = styled.div`
     text-transform: uppercase;
     text-transform: bold;
   }
+  & .price-container p {
+    font-size: 10px;
+    padding: 0;
+    display: inline;
+    text-align: left;
+    font-family: 'Century Gothic';
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: none;
+  }
 `;
