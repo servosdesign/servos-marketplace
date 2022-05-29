@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StyledDiv = styled.div`
   display: flex;
-  padding-top: 40px;
+  text-align: center;
+  padding-top: 33px;
 `;
 
 export const StyledButton = styled.button`
@@ -112,11 +113,42 @@ export const StyledButton = styled.button`
    & .top-key {
     left: -2px;
     width: 0px;
-}
+  }
 
-& .bottom-key-1 ,
-& .bottom-key-2 {
-  right: 0;
-  width: 0;
+  & .bottom-key-1 ,
+  & .bottom-key-2 {
+    right: 0;
+    width: 0;
+    }
+`;
+
+export const StyledHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top 13px;
+  font-family: 'Serif';
+  font-size: 7px;
+  letter-spacing: 10px;
+  font-weight: 500;
+  text-transform: bold;
+  text-transform: uppercase;
+
+  & div {
+    padding-top: 20px;
+    float: left;
+    height: 30px;
+  }
+
+  & p {
+    display: inline;
+    height: 20px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Century Gothic';
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 25px;
   }
 `;
