@@ -2,7 +2,6 @@ import React from 'react';
 
 import servos1 from 'assets/servos1.json';
 import servos2 from 'assets/servos2.json';
-import nftDetails from 'assets/nft_details.json';
 
 import BuyButton from '../buy-button/buy-button.component';
 
@@ -20,7 +19,7 @@ const NftDisplay = props => {
               <h2>{x.name}</h2>
               <img src={x.image} alt="servos" />
               <p>{x.description}</p>
-              <BuyButton nft_Id={x.token_id}/>
+              <BuyButton nft_Id={x.token_id} buyNft={props.buyNft}/>
             </div>
           );
         })}
