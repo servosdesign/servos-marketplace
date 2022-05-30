@@ -9,6 +9,7 @@ import Web3 from 'web3';
 import { network, clientId } from '../src/config/config';
 import NftDisplay from './components/nft-display/nft-display.component';
 import LoginButton from './components/login-button/login-button.component';
+import LoadingSpinner from './components/loading-spinner/loading-spinner.component';
 
 import './App.css';
 
@@ -22,7 +23,7 @@ function App() {
   const [account, setAccount] = useState("");
   const [balance, setBalance] = useState("");
 
-  useEffect(() => {
+  useEffect(() => { 
     async function init() {
       const web3AuthInstance = new Web3Auth({
         chainConfig: network,
@@ -52,7 +53,7 @@ function App() {
 
   const connect = async () => {
     if (!web3Auth) {
-      alert("web3auth is not initialized");
+      alert("Please wait for Web3Auth to initialize before connecting.");
       return;
     }
     const provider = await web3Auth.connect();
@@ -73,15 +74,23 @@ function App() {
 
   return (
     <div className="App">
-      <LoginButton 
-      connectWallet={connect} 
-      balance={balance} 
-      account={account}
-      logoutButton={logout}
-      />
-      <NftDisplay isLoggedIn={provider} buyNft={buy}/>
+      {!!web3Auth ? 
+        <>
+          <LoginButton 
+          connectWallet={connect} 
+          balance={balance} 
+          account={account}
+          logoutButton={logout}
+          />
+         <NftDisplay isLoggedIn={provider} buyNft={buy} />
+        </>
+        : 
+        <>
+          <LoadingSpinner />
+          <NftDisplay isLoggedIn={provider} buyNft={buy} />
+        </>}
     </div>
   );
-}
+};
 
 export default App;

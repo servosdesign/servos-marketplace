@@ -3,7 +3,7 @@ import { StyledDiv, StyledButton, StyledHeader, StyledLogout } from './login-but
 export const LoginButton = props => {
   return (
     <>
-      {!!props.account ? (
+      {!!props.account ? 
         <StyledHeader>
           <div className='container'>
             <div>Address:<p>{props.account}</p>
@@ -18,8 +18,8 @@ export const LoginButton = props => {
              <span className='bottom-key-2'></span>
              </StyledLogout>
            </div>
-          </StyledHeader>) 
-        : (
+          </StyledHeader>
+        : 
         <StyledDiv> 
           <StyledButton onClick={props.connectWallet}>
           <span className='top-key'></span>
@@ -27,7 +27,7 @@ export const LoginButton = props => {
             <span className='bottom-key-1'></span>
             <span className='bottom-key-2'></span>
           </StyledButton>
-        </StyledDiv>)}
+        </StyledDiv>}
     </>
   );
 };
