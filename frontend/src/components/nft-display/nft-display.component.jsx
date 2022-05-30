@@ -32,7 +32,7 @@ const NftDisplay = props => {
   } else {
     return (
       <StyledDisplay>
-      {allServos.map((x) => {
+        {allServos.map((x) => {
           return (
             <div key={x.token_id}>
               <h2>{x.name}</h2>
@@ -44,7 +44,6 @@ const NftDisplay = props => {
     </StyledDisplay>
     );
   }
-  
 };
 
 export default NftDisplay;
